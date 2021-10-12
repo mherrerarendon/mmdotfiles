@@ -1,0 +1,94 @@
+{
+    "yaml.schemas": {
+        "file:///Users/mherrerarendon/.vscode/extensions/atlassian.atlascode-2.8.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.bitbucket.enabled": false,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "96276068-0832-4b27-a8d4-3392083863c3",
+            "enabled": true,
+            "name": "My makemusic Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "520fd16a-55a6-431f-9b77-78d143d31ef7",
+            "monitor": true
+        }
+    ],
+    "git.autofetch": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "python.languageServer": "Pylance",
+    "terminal.integrated.rendererType": "dom",
+    "workbench.colorTheme": "Default Light+",
+    "editor.minimap.enabled": false,
+    // "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "window.zoomLevel": 2,
+    "editor.lineNumbers": "relative",
+    // "vim.normalModeKeyBindingsNonRecursive": [
+    //     {
+    //         "before": [
+    //             "d"
+    //         ],
+    //         "after": [
+    //             "\"",
+    //             "_",
+    //             "d"
+    //         ],
+    //     },
+    //     {
+    //         "before": [
+    //             "c"
+    //         ],
+    //         "after": [
+    //             "\"",
+    //             "_",
+    //             "c"
+    //         ],
+    //     },
+    // ],
+    "vim.statusBarColors.surroundinputmode": "",
+    "files.exclude": {
+        "**/__pycache__/**": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache/**": true
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "cmake.defaultVariants": {
+        "buildType": {
+            "default": "debug",
+            "description": "The build type.",
+            "choices": {
+                "debug": {
+                    "short": "Debug",
+                    "long": "Disable optimizations - include debug information.",
+                    "buildType": "Debug"
+                },
+                "release": {
+                    "short": "Release",
+                    "long": "Optimize for speed - exclude debug information.",
+                    "buildType": "Release"
+                },
+                "minsize": {
+                    "short": "MinSizeRel",
+                    "long": "Optimize for smallest binary size - exclude debug information.",
+                    "buildType": "MinSizeRel"
+                },
+                "reldeb": {
+                    "short": "RelWithDebInfo",
+                    "long": "Optimize for speed - include debug information.",
+                    "buildType": "RelWithDebInfo"
+                }
+            }
+        }
+    },
+    "explorer.confirmDelete": false
+}

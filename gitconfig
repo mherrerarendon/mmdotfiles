@@ -1,0 +1,37 @@
+[core]
+	excludesfile = /Users/mherrerarendon/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Marco Herrera-Rendon
+	email = mherrerarendon@makemusic.com
+[commit]
+	template = /Users/mherrerarendon/.stCommitMsg
+[diff "musx"]
+	textconv = /Users/mherrerarendon/FinaleAutomation/support/tools/musx2fnf
+[alias]
+	all = !python FinaleLib/Scripts/GitAlias/update_all.py $1
+	unstage = reset HEAD --
+	diffw = diff --ignore-space-at-eol
+	showw = show --ignore-space-at-eol
+	hardclean = clean -fd
+	cleanpreview = clean -n
+[diff "utf16"]
+    textconv = iconv -f UTF-16LE -t utf-8
+[diff]
+	tool = bc3
+[difftool "bc3"]
+    path = "/usr/local/bin/bcomp"
+[merge]
+	tool = bc3
+[mergetool]
+	bc3 = trustExitCode
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

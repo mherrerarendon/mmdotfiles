@@ -1,0 +1,22 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+
+#10.64.145.136     ws.makemusic.com
+
+# Sparkle testing (point both of these to sparkle test server)
+#10.64.8.134 		downloads2.makemusic.com
+#10.64.8.134 		makemusic-downloads.makemusic.com
+
+#10.64.8.234		ci.makemusic.com
+
+# Sharing testing
+#3.215.252.84		library.smartmusic.com
+#3.233.243.45		platform.smartmusic.com
+#52.1.245.131		finaleauth.smartmusic.com

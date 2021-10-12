@@ -1,0 +1,11 @@
+Host *
+  UseKeychain yes
+  AddKeysToAgent yes
+  HostName github.com
+  User git
+
+Host github-mh
+  IdentityFile ~/.ssh/id_mh
+
+Host github-mm
+  IdentityFile ~/.ssh/id_mm
