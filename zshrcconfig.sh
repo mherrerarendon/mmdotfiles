@@ -1,10 +1,6 @@
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # Functions
 fnf() {
     python /Users/mherrerarendon/FinaleAutomation/support/FileUpdaters/CreateFnfs.py "$1"
-    
 }
 
 qmlscene() {
@@ -76,6 +72,15 @@ fi
     echo "Copied MusicXML.bundle to $1/Contents/PlugIns/"
 }
 
+pyinit() {
+    mkdir "$1"
+    cd "$1"
+    mkdir src
+    touch src/__init__.py
+    python3 -m venv venv
+    source venv/bin/activate
+}
+
 # Aliases
 alias summary="python /Users/mherrerarendon/Developer/mmgit/tools/summary.py"
 alias mmlist="python /Users/mherrerarendon/Developer/mmgit/tools/list_repos.py"
@@ -89,8 +94,9 @@ alias hosts="sudo nvim /private/etc/hosts"
 alias gitconfig="nvim ~/.gitconfig"
 alias codeconfig="nvim /Users/mherrerarendon/Library/Application\ Support/Code/User/settings.json"
 alias sshconfig="nvim /Users/mherrerarendon/.ssh/config"
-alias zconfig="nvim /Users/mherrerarendon/.zshrc"
+alias zconfig="nvim /Users/mherrerarendon/Developer/configs/zshrc.sh"
 alias refresh="source ~/.zshrc"
 alias applyrules="sudo pfctl -a com.apple.internet-sharing/shared_v4 -N -f ~/LocalDesktop/newrules.conf 2>/dev/null"
 alias rules="sudo pfctl -a com.apple.internet-sharing/shared_v4 -s nat 2>/dev/null"
+alias paths="sudo nvim /etc/paths"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
