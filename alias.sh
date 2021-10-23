@@ -87,19 +87,23 @@ alias mmlist="python /Users/mherrerarendon/Developer/mmgit/tools/list_repos.py"
 alias getfin="python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a app"
 alias getmacinstall="python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -r"
 alias getwininstall="python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -r -o win32"
-alias cdmmgit="cd /Users/mherrerarendon/Developer/mmgit"
-alias cdmhgit="cd /Users/mherrerarendon/Developer/mhgit"
-alias cdrust="cd /Users/mherrerarendon/Developer/mhgit/rust"
 alias hosts="sudo nvim /private/etc/hosts"
 alias sshconfig="nvim /Users/mherrerarendon/.ssh/config"
 alias applyrules="sudo pfctl -a com.apple.internet-sharing/shared_v4 -N -f ~/LocalDesktop/newrules.conf 2>/dev/null"
 alias rules="sudo pfctl -a com.apple.internet-sharing/shared_v4 -s nat 2>/dev/null"
 alias paths="sudo nvim /etc/paths"
 alias refresh="source ~/.zshrc"
+alias aliasconfig="nvim ~/Developer/dotfiles/alias.sh"
+
+# cd shortcuts
+alias cdmmgit="cd /Users/mherrerarendon/Developer/mmgit"
+alias cdmhgit="cd /Users/mherrerarendon/Developer/mhgit"
+alias cdrust="cd /Users/mherrerarendon/Developer/mhgit/rust"
+alias cddotfiles="cd /Users/mherrerarendon/Developer/dotfiles"
 
 # linked dotfiles
 alias gitconfig="nvim ~/.gitconfig"
 alias codeconfig="nvim ~/Library/Application\ Support/Code/User/settings.json"
-alias aliasconfig="nvim ~/Developer/dotfiles/alias.sh"
+alias zconfig="nvim ~/.zshrc"
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
