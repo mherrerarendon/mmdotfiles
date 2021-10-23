@@ -94,6 +94,7 @@ alias rules="sudo pfctl -a com.apple.internet-sharing/shared_v4 -s nat 2>/dev/nu
 alias paths="sudo nvim /etc/paths"
 alias refresh="source ~/.zshrc"
 alias aliasconfig="nvim ~/Developer/dotfiles/alias.sh"
+alias gconfig="nvim .git/config"
 
 # cd shortcuts
 alias cdmmgit="cd /Users/mherrerarendon/Developer/mmgit"
