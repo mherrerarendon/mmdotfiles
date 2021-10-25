@@ -106,5 +106,7 @@ alias cddotfiles="cd /Users/mherrerarendon/Developer/dotfiles"
 alias gitconfig="nvim ~/.gitconfig"
 alias codeconfig="nvim ~/Library/Application\ Support/Code/User/settings.json"
 alias zconfig="nvim ~/.zshrc"
+alias vimconfig="nvim ~/.vim/vimrc"
+alias nvimconfig="nvim ~/.config/nvim/init.vim"
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
