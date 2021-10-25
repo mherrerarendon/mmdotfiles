@@ -1,10 +1,10 @@
 # Functions
 fnf() {
-    python /Users/mherrerarendon/FinaleAutomation/support/FileUpdaters/CreateFnfs.py "$1"
+    python ~/FinaleAutomation/support/FileUpdaters/CreateFnfs.py "$1"
 }
 
 qmlscene() {
-    /Users/mherrerarendon/Qt/5.12.1/clang_64/bin/qmlscene "$1"
+    ~/Qt/5.12.1/clang_64/bin/qmlscene "$1"
 }
 
 fixssh() {
@@ -13,7 +13,7 @@ fixssh() {
 }
 
 musx() {
-    python /Users/mherrerarendon/FinaleAutomation/support/FileUpdaters/CreateMusx.py "$1"
+    python ~/FinaleAutomation/support/FileUpdaters/CreateMusx.py "$1"
 }
 
 getesinstallers() {
@@ -27,15 +27,15 @@ getinstallers() {
 }
 
 getmacinstalllang() {
-    python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -l "$1" -r
+    python ~/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -l "$1" -r
 }
 
 getwininstalllang() {
-    python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -l "$1" -r -o win32
+    python ~/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -l "$1" -r -o win32
 }
 
 getfinlang() {
-    python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a app -l "$1"
+    python ~/FinaleAutomation/Download_Finale_Clean_Install.py -a app -l "$1"
 }
 
 clearfinprefs() {
@@ -44,20 +44,20 @@ clearfinprefs() {
 }
 
 cdfin() {
-    cd /Users/mherrerarendon/Developer/mmgit/Finale$1
+    cd ~/Developer/mmgit/Finale$1
 }
 
 cdplugins() {
-    cd /Users/mherrerarendon/Developer/mmgit/Plugins$1/FinExt
+    cd ~/Developer/mmgit/Plugins$1/FinExt
 }
 
 cdfa() {
-    cd /Users/mherrerarendon/FinaleAutomation
+    cd ~/FinaleAutomation
     python setup.py
 }
 
 mmgo() {
-    repoPath=$(python /Users/mherrerarendon/Developer/mmgit/tools/go_to_repo.py $1)
+    repoPath=$(python ~/Developer/mmgit/tools/go_to_repo.py $1)
     printf %"s\n"
     echo "New working directory: $repoPath"
     cd $repoPath
@@ -82,13 +82,13 @@ pyinit() {
 }
 
 # Aliases
-alias summary="python /Users/mherrerarendon/Developer/mmgit/tools/summary.py"
-alias mmlist="python /Users/mherrerarendon/Developer/mmgit/tools/list_repos.py"
-alias getfin="python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a app"
-alias getmacinstall="python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -r"
-alias getwininstall="python /Users/mherrerarendon/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -r -o win32"
+alias summary="python ~/Developer/mmgit/tools/summary.py"
+alias mmlist="python ~/Developer/mmgit/tools/list_repos.py"
+alias getfin="python ~/FinaleAutomation/Download_Finale_Clean_Install.py -a app"
+alias getmacinstall="python ~/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -r"
+alias getwininstall="python ~/FinaleAutomation/Download_Finale_Clean_Install.py -a installer -r -o win32"
 alias hosts="sudo nvim /private/etc/hosts"
-alias sshconfig="nvim /Users/mherrerarendon/.ssh/config"
+alias sshconfig="nvim ~/.ssh/config"
 alias applyrules="sudo pfctl -a com.apple.internet-sharing/shared_v4 -N -f ~/LocalDesktop/newrules.conf 2>/dev/null"
 alias rules="sudo pfctl -a com.apple.internet-sharing/shared_v4 -s nat 2>/dev/null"
 alias paths="sudo nvim /etc/paths"
@@ -97,10 +97,10 @@ alias aliasconfig="nvim ~/Developer/dotfiles/alias.sh"
 alias gconfig="nvim .git/config"
 
 # cd shortcuts
-alias cdmmgit="cd /Users/mherrerarendon/Developer/mmgit"
-alias cdmhgit="cd /Users/mherrerarendon/Developer/mhgit"
-alias cdrust="cd /Users/mherrerarendon/Developer/mhgit/rust"
-alias cddotfiles="cd /Users/mherrerarendon/Developer/dotfiles"
+alias cdmmgit="cd ~/Developer/mmgit"
+alias cdmhgit="cd ~/Developer/mhgit"
+alias cdrust="cd ~/Developer/mhgit/rust"
+alias cddotfiles="cd ~/Developer/dotfiles"
 
 # linked dotfiles
 alias gitconfig="nvim ~/.gitconfig"
