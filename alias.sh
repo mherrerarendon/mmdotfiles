@@ -95,6 +95,7 @@ alias paths="sudo nvim /etc/paths"
 alias refresh="source ~/.zshrc"
 alias aliasconfig="nvim ~/Developer/dotfiles/alias.sh"
 alias gconfig="nvim .git/config"
+alias cpwd="pwd | pbcopy"
 
 # cd shortcuts
 alias cdmmgit="cd /Users/mherrerarendon/Developer/mmgit"
