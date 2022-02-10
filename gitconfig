@@ -1,6 +1,6 @@
 [core]
 	excludesfile = /Users/mherrerarendon/.gitignore_global
-	pager = cat
+#	pager = cat
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
