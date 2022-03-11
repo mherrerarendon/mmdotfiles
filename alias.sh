@@ -6,19 +6,28 @@ MMROOT="$HOME/Developer/mmgit"
 MAROOT="$MMROOT/ma"
 MAWWW="$MAROOT/www"
 
-# Functions
-flutter_poc() {
-    cd $MMROOT/ma/flutter_poc
+# Setup functions
+practice() {
+    cd $MHROOT/python/google
     smerge .
     code .
 }
 
-aria() {
-    cd $MMROOT/Aria2021
-    code .
+mnx() {
+    cd $MHROOT
+    cd rust_notation
+    smerge mnx-edit
+    smerge mnx-layout
+    smerge mnx-rs
+    code mnx-edit
+    code mnx-layout
+    ls
+}
+
+flutter_poc() {
+    cd $MMROOT/ma/flutter_poc
     smerge .
-    open Garritan/Sampler/SmplLib/mac/ARIA_xc12.xcodeproj
-    open Garritan/Sampler/LogGetter/workspace/mac/LogGetter.xcodeproj
+    code .
 }
 
 soundtest() {
@@ -28,22 +37,23 @@ soundtest() {
     open ios/Runner.xcworkspace
 }
 
-mmclone() {
-    repo_url=${1/github.com/github-mm}
-    git clone $repo_url
+march_data() {
+    cd $MMROOT/march/notation_packages/data_bloc
+    smerge .
+    code .
 }
 
-mhclone() {
-    repo_url=${1/github.com/github-mh}
-    git clone $repo_url
+march() {
+    cd $MMROOT/march
+    smerge .
+    code .
 }
 
-masetup() {
-    cd $MAROOT
-    smerge music-architect
-    smerge SolFramework
-    code music-architect
-    code SolFramework
+ma() {
+    cd $MAROOT/music-architect
+    smerge .
+    code .
+    open "Project - NonRegressionTest/MacProject/Project M1.xcodeproj"
 }
 
 sol() {
@@ -59,6 +69,42 @@ citools() {
     code .
 }
 
+fin() {
+    cd $MMROOT/Finale$1
+    open FinaleMacProject/Finale/Finale.xcworkspace
+    code .
+    smerge .
+}
+
+sharing() {
+    cd $MMROOT/Finale$1
+    open MusicSharing/MusicSharingMac/MusicSharingMac.xcodeproj
+    code .
+    smerge .
+}
+
+fa() {
+    cd ~/FinaleAutomation
+    smerge .
+    code .
+}
+
+# Functions
+build_sol() {
+    python3 $MAROOT/SolFramework/Scripts/build.py --ide
+}
+
+
+mmclone() {
+    repo_url=${1/github.com/github-mm}
+    git clone $repo_url
+}
+
+mhclone() {
+    repo_url=${1/github.com/github-mh}
+    git clone $repo_url
+}
+
 matest() {
     OUTPUT=$(xcrun xcodebuild \
 	-scheme NonRegressionMATest \
@@ -67,17 +113,6 @@ matest() {
     if [[ $? == 0 ]]; then
 	open $MAROOT/music-architect/Project\ -\ NonRegressionTest/MacProject/build/Debug/NonRegressionMATest.app
     fi
-}
-
-mnxsetup() {
-    cd $MHROOT
-    cd rust_notation
-    smerge mnx-edit
-    smerge mnx-layout
-    smerge mnx-rs
-    code mnx-edit
-    code mnx-layout
-    ls
 }
 
 fnf() {
@@ -120,20 +155,6 @@ clearfinprefs() {
     rm ~/Library/Preferences/com.makemusic.finale27.fprf
 }
 
-sharing() {
-    cd $MMROOT/Finale$1
-    open MusicSharing/MusicSharingMac/MusicSharingMac.xcodeproj
-    code .
-    smerge .
-}
-
-fin() {
-    cd $MMROOT/Finale$1
-    open FinaleMacProject/Finale/Finale.xcworkspace
-    code .
-    smerge .
-}
-
 finsmerge() {
     smerge 2012FileConverter
     smerge FinaleLib/LIB
@@ -145,12 +166,6 @@ cdfin() {
 
 cdplugins() {
     cd $MMROOT/Plugins$1/FinExt
-}
-
-fa() {
-    cd ~/FinaleAutomation
-    smerge .
-    code .
 }
 
 mmgo() {
@@ -174,6 +189,11 @@ pyinit() {
     cd "$1"
     mkdir src
     touch src/__init__.py
+    echo "def dummy():\n\tpass" | tee -a src/__init__.py >/dev/null
+    mkdir tests
+    touch tests/__init__.py
+    touch tests/test_src.py
+    echo "import src\ndef test_src():\n\tsrc.dummy()\n\tassert 1 == 1" | tee -a tests/test_src.py >/dev/null
     python3 -m venv venv
     source venv/bin/activate
     touch requirements.txt
@@ -217,7 +237,9 @@ alias cdmmgit="cd $MMROOT"
 alias cdmhgit="cd $MHROOT"
 alias cddotfiles="cd ~/Developer/dotfiles"
 alias cdma="cd $MMROOT/ma"
-alias desktop="cd ~/Desktop"
+alias cdmarch="cd $MMROOT/march"
+alias cdsol="cd $MMROOT/ma/SolFramework"
+alias cddesktop="cd ~/Desktop"
 
 # linked dotfiles
 alias gitconfig="nvim ~/.gitconfig"

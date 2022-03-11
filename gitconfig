@@ -21,6 +21,7 @@
 	showw = show --ignore-space-at-eol
 	hardclean = clean -fd
 	cleanpreview = clean -n
+	march = !python scripts/git_all.py $1
 [diff "utf16"]
     textconv = iconv -f UTF-16LE -t utf-8
 [diff]

@@ -94,10 +94,12 @@
     "explorer.confirmDelete": false,
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
-        "*": false,
-        "yaml": false,
+        "*": true,
+        "yaml": true,
         "plaintext": true,
-        "markdown": false
+        "markdown": false,
+        "dart": true,
+        "rust": true
     },
     "editor.largeFileOptimizations": false,
     "react-native.packager.port": 19000,
@@ -140,5 +142,6 @@
 		// // Allows pressing <TAB> to complete snippets such as `for` even when the
 		// // completion list is not visible.
 		// "editor.tabCompletion": "onlySnippets",
-     },
+    },
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, 'Finale Maestro'",
 }
