@@ -16,11 +16,12 @@ practice() {
 mnx() {
     cd $MHROOT
     cd rust_notation
-    smerge mnx-edit
-    smerge mnx-layout
+    #smerge mnx-edit
+    #smerge mnx-layout
     smerge mnx-rs
-    code mnx-edit
-    code mnx-layout
+    #code mnx-edit
+    #code mnx-layout
+    code mnx-rs
     ls
 }
 
@@ -210,6 +211,10 @@ getsol() {
     rm ~/bin/SolCompiler.zip
     mv -f ~/bin/SolCompiler/SolideCL ~/bin
     rm -rf ~/bin/SolCompiler
+}
+
+snippets() {
+    nvim $HOME/Developer/dotfiles/snippets/$1.json
 }
 
 # Aliases

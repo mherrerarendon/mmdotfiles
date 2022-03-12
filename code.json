@@ -119,6 +119,7 @@
         "editor.defaultFormatter": "Dart-Code.dart-code",
         "editor.formatOnSave": true,
         "editor.wordBasedSuggestions": false,
+        "editor.tabSize": 4,
 
         // Disables built-in highlighting of words that match your selection. Without
 		// this, all instances of the selected text will be highlighted, interfering
