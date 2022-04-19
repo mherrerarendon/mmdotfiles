@@ -7,20 +7,9 @@ MAROOT="$MMROOT/ma"
 MAWWW="$MAROOT/www"
 
 # Setup functions
-practice() {
-    cd $MHROOT/python/google
-    smerge .
-    code .
-}
-
 mnx() {
-    cd $MHROOT
-    cd rust_notation
-    #smerge mnx-edit
-    #smerge mnx-layout
+    cd $MMROOT
     smerge mnx-rs
-    #code mnx-edit
-    #code mnx-layout
     code mnx-rs
     ls
 }
@@ -29,13 +18,6 @@ flutter_poc() {
     cd $MMROOT/ma/flutter_poc
     smerge .
     code .
-}
-
-soundtest() {
-    cd $MHROOT/flutter/sound_test
-    code .
-    smerge .
-    open ios/Runner.xcworkspace
 }
 
 march_data() {
@@ -161,6 +143,7 @@ finsmerge() {
     smerge FinaleLib/LIB
     smerge PlogueEngine
 }
+
 cdfin() {
     cd $MMROOT/Finale$1
 }
@@ -245,6 +228,8 @@ alias cdma="cd $MMROOT/ma"
 alias cdmarch="cd $MMROOT/march"
 alias cdsol="cd $MMROOT/ma/SolFramework"
 alias cddesktop="cd ~/Desktop"
+alias cdcompose="cd $MMROOT/composeui"
+alias cdredux="cd $MMROOT/composeui/with_redux"
 
 # linked dotfiles
 alias gitconfig="nvim ~/.gitconfig"
