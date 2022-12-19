@@ -200,6 +200,21 @@ snippets() {
     nvim $HOME/Developer/dotfiles/snippets/$1.json
 }
 
+startauth() {
+    cd $MMROOT/composeui/auth
+    ./bin/setup
+}
+
+findrepo() {
+    mdfind kind:folder $1 -onlyin .
+}
+
+ingh() {
+    repo_url=`git config --get remote.origin.url`
+    echo Launching $repo_url
+    open $repo_url
+}
+
 # Aliases
 alias summary="python $MMROOT/tools/summary.py"
 alias mmlist="python $MMROOT/tools/list_repos.py"
@@ -219,6 +234,11 @@ alias cpwd="pwd | pbcopy"
 alias macode="code $MAROOT/SmartMusicCompose/"
 alias madebug="open http://localhost:8080/SmartMusicCompose/SmartMusicCompose.html"
 alias solide="open /Applications/solide"
+alias finuat="open /Applications/Finale.app --args -d \"UATSharing=true\""
+alias parisak="sh ~/Developer/parisak.sh"
+alias awsconfig="nvim ~/.aws/config"
+alias awscreds="nvim ~/.aws/credentials"
+alias rubyconfig="nvim ~/.bundle/config"
 
 # cd shortcuts
 alias cdmmgit="cd $MMROOT"
@@ -230,6 +250,7 @@ alias cdsol="cd $MMROOT/ma/SolFramework"
 alias cddesktop="cd ~/Desktop"
 alias cdcompose="cd $MMROOT/composeui"
 alias cdredux="cd $MMROOT/composeui/with_redux"
+alias cdfa="cd $HOME/FinaleAutomation"
 
 # linked dotfiles
 alias gitconfig="nvim ~/.gitconfig"

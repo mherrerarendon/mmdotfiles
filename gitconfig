@@ -1,12 +1,6 @@
 [core]
 	excludesfile = /Users/mherrerarendon/.gitignore_global
 #	pager = cat
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
 	name = Marco Herrera-Rendon
 	email = mherrerarendon@makemusic.com
@@ -37,3 +31,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[credential]
+	helper = cache --timeout=604800
+[hub]
+	protocol = https

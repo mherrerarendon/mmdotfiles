@@ -1,138 +1,203 @@
 {
-    "git.autofetch": true,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "python.languageServer": "Pylance",
-    "workbench.colorTheme": "Default Light+",
-    "editor.minimap.enabled": false,
-    // "editor.formatOnSave": true,
-    "editor.tabSize": 4,
-    "window.zoomLevel": 2,
-    "editor.lineNumbers": "relative",
-    "vim.statusBarColors.surroundinputmode": "",
-    "vim.statusBarColorControl": false,
-    "files.exclude": {
-        "**/__pycache__/**": true,
-        "**/*.pyc": true,
-        "**/.pytest_cache/**": true
-    },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "files.associations": {
-        "*.js": "javascriptreact"
-    },
-    "cmake.defaultVariants": {
-        "buildType": {
-            "default": "debug",
-            "description": "The build type.",
-            "choices": {
-                "debug": {
-                    "short": "Debug",
-                    "long": "Disable optimizations - include debug information.",
-                    "buildType": "Debug"
-                },
-                "release": {
-                    "short": "Release",
-                    "long": "Optimize for speed - exclude debug information.",
-                    "buildType": "Release"
-                },
-                "minsize": {
-                    "short": "MinSizeRel",
-                    "long": "Optimize for smallest binary size - exclude debug information.",
-                    "buildType": "MinSizeRel"
-                },
-                "reldeb": {
-                    "short": "RelWithDebInfo",
-                    "long": "Optimize for speed - include debug information.",
-                    "buildType": "RelWithDebInfo"
-                }
-            }
+  "git.autofetch": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "python.languageServer": "Pylance",
+  "workbench.colorTheme": "Default Light+",
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 4,
+  "editor.codeLens": true,
+  "window.zoomLevel": 2,
+  "editor.lineNumbers": "relative",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "vim.statusBarColors.surroundinputmode": "",
+  "vim.statusBarColorControl": false,
+  "files.exclude": {
+    "**/__pycache__/**": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache/**": true
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "cmake.defaultVariants": {
+    "buildType": {
+      "default": "debug",
+      "description": "The build type.",
+      "choices": {
+        "debug": {
+          "short": "Debug",
+          "long": "Disable optimizations - include debug information.",
+          "buildType": "Debug"
+        },
+        "release": {
+          "short": "Release",
+          "long": "Optimize for speed - exclude debug information.",
+          "buildType": "Release"
+        },
+        "minsize": {
+          "short": "MinSizeRel",
+          "long": "Optimize for smallest binary size - exclude debug information.",
+          "buildType": "MinSizeRel"
+        },
+        "reldeb": {
+          "short": "RelWithDebInfo",
+          "long": "Optimize for speed - include debug information.",
+          "buildType": "RelWithDebInfo"
         }
-    },
-    "explorer.confirmDelete": false,
-    "editor.inlineSuggest.enabled": true,
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": true,
-        "plaintext": true,
-        "markdown": true,
-        "dart": true,
-        "rust": true
-    },
-    "editor.largeFileOptimizations": false,
-    "react-native.packager.port": 19000,
-    // "editor.maxTokenizationLineLength": 2000000,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.hover.enabled": false,
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.hover.enabled": false,
-    },
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.hover.enabled": false
-    },
-    "[rust]": {
-        "editor.formatOnSave": true,
-        "editor.hover.enabled": false,
-        // "editor.hover.sticky": false,
-    },
-    "[dart]": {
-        "editor.hover.enabled": false,
-        "editor.rulers": [180],
-        "editor.defaultFormatter": "Dart-Code.dart-code",
-        "editor.formatOnSave": true,
-        "editor.wordBasedSuggestions": false,
-        "editor.tabSize": 4,
-        "editor.formatOnType": true,
+      }
+    }
+  },
+  "explorer.confirmDelete": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "dart": true,
+    "rust": false,
+    "json": false,
+    "scss": false,
+    "javascriptreact": false,
+    "tf": false,
+    "typescript": false,
+    "typescriptreact": false,
+    "tfvars": false
+  },
+  "editor.largeFileOptimizations": false,
+  "react-native.packager.port": 19000,
+  "[typescriptreact][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.hover.enabled": false
+  },
+  "[javascriptreact][javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.hover.enabled": false
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.hover.enabled": false
+  },
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.hover.enabled": false
+    // "editor.hover.sticky": false,
+  },
+  "[dart]": {
+    "editor.hover.enabled": false,
+    "editor.rulers": [180],
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.wordBasedSuggestions": false,
+    "editor.tabSize": 4,
+    "editor.formatOnType": true,
 
-        // Disables built-in highlighting of words that match your selection. Without
-		// this, all instances of the selected text will be highlighted, interfering
-		// with Dart's ability to highlight only exact references to the selected variable.
-		"editor.selectionHighlight": false,
+    // Disables built-in highlighting of words that match your selection. Without
+    // this, all instances of the selected text will be highlighted, interfering
+    // with Dart's ability to highlight only exact references to the selected variable.
+    "editor.selectionHighlight": false,
 
-		// By default, VS Code prevents code completion from popping open when in
-		// "snippet mode" (editing placeholders in inserted code). Setting this option
-		// to `false` stops that and allows completion to open as normal, as if you
-		// weren't in a snippet placeholder.
-		"editor.suggest.snippetsPreventQuickSuggestions": false,
+    // By default, VS Code prevents code completion from popping open when in
+    // "snippet mode" (editing placeholders in inserted code). Setting this option
+    // to `false` stops that and allows completion to open as normal, as if you
+    // weren't in a snippet placeholder.
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
 
-		// By default, VS Code will pre-select the most recently used item from code
-		// completion. This is usually not the most relevant item.
-		//
-		// "first" will always select top item
-		// "recentlyUsedByPrefix" will filter the recently used items based on the
-		//     text immediately preceding where completion was invoked.
-		"editor.suggestSelection": "first",
+    // By default, VS Code will pre-select the most recently used item from code
+    // completion. This is usually not the most relevant item.
+    //
+    // "first" will always select top item
+    // "recentlyUsedByPrefix" will filter the recently used items based on the
+    //     text immediately preceding where completion was invoked.
+    "editor.suggestSelection": "first"
 
-		// // Allows pressing <TAB> to complete snippets such as `for` even when the
-		// // completion list is not visible.
-		// "editor.tabCompletion": "onlySnippets",
+    // // Allows pressing <TAB> to complete snippets such as `for` even when the
+    // // completion list is not visible.
+    // "editor.tabCompletion": "onlySnippets",
+  },
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, 'Finale Maestro'",
+  // "editor.formatOnSave": true,
+  "rust-analyzer.cargo.allFeatures": true,
+  "powershell.promptToUpdatePowerShell": false,
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.mouseWheelScrollSensitivity": 0.4,
+  "workbench.list.mouseWheelScrollSensitivity": 0.4,
+  "terminal.integrated.mouseWheelScrollSensitivity": 0.4,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
     },
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, 'Finale Maestro'",
-    // "editor.formatOnSave": true,
-    "rust-analyzer.cargo.allFeatures": true,
-    "powershell.promptToUpdatePowerShell": false,
-    "dart.debugExternalPackageLibraries": true,
-    "dart.debugSdkLibraries": true,
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
+    {
+      "before": ["L"],
+      "after": ["$"]
     },
-    "editor.mouseWheelScrollSensitivity": 0.4,
-    "workbench.list.mouseWheelScrollSensitivity": 0.4,
-    "terminal.integrated.mouseWheelScrollSensitivity": 0.4,
-    // "editor.quickSuggestions": {
-    //     "other": "on",
-    //     "comments": "off",
-    //     "strings": "off"
-    // },
+    {
+      "before": ["d", "H"],
+      "after": ["d", "^"]
+    },
+    {
+      "before": ["d", "L"],
+      "after": ["d", "$"]
+    },
+    {
+      "before": ["v", "H"],
+      "after": ["v", "^"]
+    },
+    {
+      "before": ["v", "L"],
+      "after": ["v", "$"]
+    },
+    {
+      "before": ["c", "H"],
+      "after": ["c", "^"]
+    },
+    {
+      "before": ["c", "L"],
+      "after": ["c", "$"]
+    }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.semanticHighlighting.enabled": true
+  },
+  "byesig.fold": false,
+  "byesig.enabled": true,
+  "byesig.opacity": 0.5,
+  "byesig.showIcon": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.rulers": [120],
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "Cargo.toml": "Cargo.lock",
+    "*.ts": "${capture}.typegen.ts, ${capture}.typegen.ts",
+    "*.tsx": "${capture}.typegen.ts, ${capture}.typegen.ts",
+    "*.mts": "${capture}.typegen.ts, ${capture}.typegen.ts",
+    "*.cts": "${capture}.typegen.ts, ${capture}.typegen.ts"
+  }
 }

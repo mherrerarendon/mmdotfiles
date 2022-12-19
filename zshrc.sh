@@ -110,3 +110,4 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
