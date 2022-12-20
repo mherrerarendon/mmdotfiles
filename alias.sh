@@ -3,8 +3,9 @@
 # Global Constants
 MHROOT="$HOME/Developer/mhgit"
 MMROOT="$HOME/Developer/mmgit"
-MAROOT="$MMROOT/ma"
+MAROOT="$MMROOT/mm/ma"
 MAWWW="$MAROOT/www"
+FINALE_ECO="$MMROOT/finale"
 
 # Setup functions
 mnx() {
@@ -12,24 +13,6 @@ mnx() {
     smerge mnx-rs
     code mnx-rs
     ls
-}
-
-flutter_poc() {
-    cd $MMROOT/ma/flutter_poc
-    smerge .
-    code .
-}
-
-march_data() {
-    cd $MMROOT/march/notation_packages/data_bloc
-    smerge .
-    code .
-}
-
-march() {
-    cd $MMROOT/march
-    smerge .
-    code .
 }
 
 ma() {
@@ -47,20 +30,20 @@ sol() {
 }
 
 citools() {
-    cd $MMROOT/FinaleCITools
+    cd $FINALE_ECO/FinaleCITools
     smerge .
     code .
 }
 
 fin() {
-    cd $MMROOT/Finale$1
+    cd $FINALE_ECO/Finale$1
     open FinaleMacProject/Finale/Finale.xcworkspace
     code .
     smerge .
 }
 
 sharing() {
-    cd $MMROOT/Finale$1
+    cd $FINALE_ECO/Finale$1
     open MusicSharing/MusicSharingMac/MusicSharingMac.xcodeproj
     code .
     smerge .
@@ -77,17 +60,6 @@ build_sol() {
     python3 $MAROOT/SolFramework/Scripts/build.py --ide
 }
 
-
-mmclone() {
-    repo_url=${1/github.com/github-mm}
-    git clone $repo_url
-}
-
-mhclone() {
-    repo_url=${1/github.com/github-mh}
-    git clone $repo_url
-}
-
 matest() {
     OUTPUT=$(xcrun xcodebuild \
 	-scheme NonRegressionMATest \
@@ -100,11 +72,6 @@ matest() {
 
 fnf() {
     python ~/FinaleAutomation/support/FileUpdaters/CreateFnfs.py "$1"
-}
-
-fixssh() {
-    ssh-add ~/.ssh/id_mh
-    ssh-add ~/.ssh/id_mm_pw
 }
 
 musx() {
@@ -145,11 +112,11 @@ finsmerge() {
 }
 
 cdfin() {
-    cd $MMROOT/Finale$1
+    cd $FINALE_ECO/Finale$1
 }
 
 cdplugins() {
-    cd $MMROOT/Plugins$1/FinExt
+    cd $FINALE_ECO/Plugins$1/FinExt
 }
 
 mmgo() {
