@@ -182,6 +182,17 @@ ingh() {
     open $repo_url
 }
 
+infinder() {
+    open .
+}
+
+ghcompare() {
+    repo_url=`git config --get remote.origin.url`
+    echo Launching $repo_url
+    open $repo_url/compare/main...uat
+}
+
+
 # Aliases
 alias summary="python $MMROOT/tools/summary.py"
 alias mmlist="python $MMROOT/tools/list_repos.py"

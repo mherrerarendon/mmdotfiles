@@ -1,4 +1,0 @@
-BUNDLE_HTTPS://RUBYGEMS__PKG__GITHUB__COM/MAKEMUSICINC/: "mherrerarendon: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"
-BUNDLE_BUILD__PUMA: "--with-cflags=-Wno-error=implicit-function-declaration"
-BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-xml2-include=/usr/local/opt/libxml2/include/libxml2"
-BUNDLE_BUILD__LIBXML-RUBY: "--with-xml2-config=/usr/local/opt/libxml2/bin/xml2-config"

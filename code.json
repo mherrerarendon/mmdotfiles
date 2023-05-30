@@ -85,7 +85,8 @@
   },
   "[python]": {
     "editor.formatOnSave": true,
-    "editor.hover.enabled": false
+    "editor.hover.enabled": false,
+    "editor.formatOnType": true
   },
   "[rust]": {
     "editor.formatOnSave": true,
@@ -199,5 +200,9 @@
     "*.tsx": "${capture}.typegen.ts, ${capture}.typegen.ts",
     "*.mts": "${capture}.typegen.ts, ${capture}.typegen.ts",
     "*.cts": "${capture}.typegen.ts, ${capture}.typegen.ts"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

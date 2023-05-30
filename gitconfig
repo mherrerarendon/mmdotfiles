@@ -35,3 +35,5 @@
 	helper = cache --timeout=604800
 [hub]
 	protocol = https
+[init]
+	defaultBranch = main
