@@ -186,10 +186,17 @@ infinder() {
     open .
 }
 
-ghcompare() {
+ghdeploy() {
     repo_url=`git config --get remote.origin.url`
     echo Launching $repo_url
     open $repo_url/compare/main...uat
+}
+
+ghcompare() {
+    branch=`git rev-parse --abbrev-ref HEAD`
+    repo_url=`git config --get remote.origin.url`
+    echo Launching $repo_url
+    open $repo_url/compare/uat...$branch
 }
 
 
