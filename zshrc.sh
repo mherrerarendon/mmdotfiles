@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
-source ~/Developer/dotfiles/alias.sh
+source ~/Developer/mmdotfiles/alias.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mherrerarendon/.oh-my-zsh"
