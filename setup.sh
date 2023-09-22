@@ -30,4 +30,4 @@ ln -s /Users/mherrerarendon/Developer/mmdotfiles/code.json ~/Library/Application
 # install the `code` command line util in ~/bin
 
 # sublime merge
-ln -s /Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge /Users/mherrerarendon/bin/smerge
+ln -s /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /Users/mherrerarendon/bin/smerge
