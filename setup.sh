@@ -1,7 +1,7 @@
 # Global Constants
 MHROOT="$HOME/Developer/mhgit"
 MMROOT="$HOME/Developer/mmgit"
-DEVELOPER="/Volumes/Rendon/RDeveloper"
+DEVELOPER="$HOME/Developer"
 DOTFILES="$DEVELOPER/mmdotfiles"
 
 # General setup
@@ -9,6 +9,7 @@ git clone mmdotfiles $DOTFILES
 # install https://ohmyz.sh/
 rm $HOME/.zshrc
 ln -s $DOTFILES/zshrc.sh $HOME/.zshrc
+rm $HOME/.gitconfig
 ln -s $DOTFILES/gitconfig $HOME/.gitconfig
 echo "export PATH=\"$HOME/bin:$PATH\"" >> $HOME/.zshenv
 
@@ -26,9 +27,9 @@ mkdir $HOME/.config/nvim
 ln -s $DOTFILES/init.vim $HOME/.config/nvim/init.vim
 
 # vscode
-ln -s $HOME/Developer/dotfiles/snippets $HOME/Library/Application\ Support/Code/User/snippets
+ln -s $DOTFILES/snippets $HOME/Library/Application\ Support/Code/User/snippets
 rm $HOME/Library/Application\ Support/Code/User/settings.json
-ln -s $DOTFILES/code.json $HOME/Library/Application\ Support/Code/User/settings.json
+ln -s "$DOTFILES/code.json" "$HOME/Library/Application Support/Code/User/settings.json"
 # install the `code` command line util in ~/bin
 
 # sublime merge

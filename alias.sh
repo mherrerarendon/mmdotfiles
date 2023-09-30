@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Global Constants
-MHROOT="$HOME/Developer/mhgit"
+MHROOT="/Volumes/Rendon/RDeveloper"
 MMROOT="$HOME/Developer/mmgit"
 MAROOT="$MMROOT/mm/ma"
 MAWWW="$MAROOT/www"
@@ -195,8 +195,9 @@ ghdeploy() {
 ghcompare() {
     branch=`git rev-parse --abbrev-ref HEAD`
     repo_url=`git config --get remote.origin.url`
+    default_branch=`git remote show origin | sed -n '/HEAD branch/s/.*: //p'`
     echo Launching $repo_url
-    open $repo_url/compare/uat...$branch
+    open $repo_url/compare/$default_branch...$branch
 }
 
 
