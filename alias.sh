@@ -200,6 +200,13 @@ ghcompare() {
     open $repo_url/compare/$default_branch...$branch
 }
 
+buildme() {
+    branch=`git rev-parse --abbrev-ref HEAD`
+    url=https://$branch.uat.makemusic.com
+    echo Launching $url
+    open $url
+}
+
 
 # Aliases
 alias summary="python $MMROOT/tools/summary.py"
