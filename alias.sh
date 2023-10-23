@@ -207,6 +207,12 @@ buildme() {
     open $url
 }
 
+localdev() {
+    url=http://srstudio.makemusic.localhost:4208/
+    echo Launching $url
+    open $url
+}
+
 
 # Aliases
 alias summary="python $MMROOT/tools/summary.py"
