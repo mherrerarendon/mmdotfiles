@@ -98,7 +98,7 @@
     "editor.rulers": [180],
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.tabSize": 4,
     "editor.formatOnType": true,
 
@@ -175,9 +175,6 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.insertSpaces": true,
@@ -207,5 +204,39 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "jest.autoRevealOutput": "off"
+  "jest.autoRevealOutput": "off",
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
+
+  "[handlebars]": {
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
+  },
+
+  "stylelint.validate": ["css", "scss"]
 }
