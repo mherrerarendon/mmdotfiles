@@ -116,3 +116,25 @@ export NVM_DIR="$HOME/.nvm"
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
 eval "$(rbenv init -)"
+export AWS_DEFAULT_REGION="us-east-1"
+export AWS_REGION="$AWS_DEFAULT_REGION"
+export AWS_PROFILE="makemusic"
+export DOCKER_DEFAULT_PLATFORM=linux/arm64
+alias ghcrlogin='echo "$GITHUB_PACKAGE_TOKEN" | docker login ghcr.io -u USERNAME --password-stdin'
+alias clockfix="sudo hwclock -s"
+alias dockerloginfix="rm ~/.docker/config.json"
+. $(eval echo $MMC_LOCATION/utils.sh)
+# BEGIN ANSIBLE MANAGED BLOCK
+# starts the SSH agent if it's not already running and adds the key to it to allow hitting github
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   # Check for a currently running instance of the agent
+   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent
+        ssh-agent -s &> $HOME/.ssh/ssh-agent
+   fi
+   eval `cat $HOME/.ssh/ssh-agent`
+fi
+
+ssh-add $HOME/.ssh/id_no_pw_ed25519
+# END ANSIBLE MANAGED BLOCK
