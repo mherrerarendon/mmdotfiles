@@ -25,7 +25,8 @@
     "jupyter-notebook": "left"
   },
   "files.associations": {
-    "*.js": "javascriptreact"
+    "*.js": "javascriptreact",
+    "*.mpd": "xml"
   },
   "cmake.defaultVariants": {
     "buildType": {
@@ -59,9 +60,10 @@
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
-    "plaintext": true,
+    "plaintext": false,
     "markdown": true,
+    "scminput": false,
+    "yaml": true,
     "dart": true,
     "rust": false,
     "json": false,
@@ -91,6 +93,7 @@
   },
   "[rust]": {
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.hover.enabled": false
     // "editor.hover.sticky": false,
   },
@@ -133,7 +136,7 @@
   },
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, 'Finale Maestro'",
   // "editor.formatOnSave": true,
-  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.cargo.allFeatures": false,
   "powershell.promptToUpdatePowerShell": false,
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true,
@@ -206,7 +209,7 @@
   },
   "git.openRepositoryInParentFolders": "never",
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -225,7 +228,7 @@
   },
   "[json]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features" // "vscode.typescript-language-features"
   },
   "[javascript]": {
     "editor.formatOnSave": true,
@@ -244,5 +247,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
   },
 
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
+  "rust-analyzer.cargo.buildScripts.overrideCommand": null,
+  "files.eol": "\n",
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  "update.mode": "manual",
 }

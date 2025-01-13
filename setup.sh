@@ -2,7 +2,7 @@
 MHROOT="$HOME/Developer/mhgit"
 MMROOT="$HOME/Developer/mmgit"
 DEVELOPER="$HOME/Developer"
-DOTFILES="$DEVELOPER/mmdotfiles"
+DOTFILES="$DEVELOPER/git/dotfiles"
 
 # General setup
 git clone mmdotfiles $DOTFILES
@@ -15,8 +15,6 @@ echo "export PATH=\"$HOME/bin:$PATH\"" >> $HOME/.zshenv
 
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/mherrerarendon/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # vim
 brew install neovim
@@ -33,4 +31,4 @@ ln -s "$DOTFILES/code.json" "$HOME/Library/Application Support/Code/User/setting
 # install the `code` command line util in ~/bin
 
 # sublime merge
-ln -s /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /Users/mherrerarendon/bin/smerge
+ln -s /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge $HOME/bin/smerge

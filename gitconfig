@@ -3,19 +3,19 @@
 #	pager = cat
 [user]
 	name = Marco Herrera-Rendon
-	email = mherrerarendon@makemusic.com
+	email = marco_herrera-rendon@comcast.com
+[includeIf "gitdir:~/Developer/git/personal/"]
+    path = ~/Developer/git/personal/.gitconfig
 [commit]
 	template = /Users/mherrerarendon/.stCommitMsg
-[diff "musx"]
-	textconv = /Users/mherrerarendon/FinaleAutomation/support/tools/musx2fnf
 [alias]
-	all = !python FinaleLib/Scripts/GitAlias/update_all.py $1
 	unstage = reset HEAD --
 	diffw = diff --ignore-space-at-eol
 	showw = show --ignore-space-at-eol
 	hardclean = clean -fd
 	cleanpreview = clean -n
 	trigger = commit --allow-empty -m "Trigger Build"
+	untrack = rm -r --cached
 [diff "utf16"]
     textconv = iconv -f UTF-16LE -t utf-8
 [diff]
