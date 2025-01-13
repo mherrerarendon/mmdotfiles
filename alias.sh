@@ -1,9 +1,6 @@
 #!/bin/bash
 
 GITROOT="$HOME/Developer/git"
-CVODEV="ec2-3-147-74-151.us-east-2.compute.amazonaws.com"
-CVO1="96.99.199.81"
-CVO2="96.99.199.84"
 
 pyinit() {
     mkdir "$1"
@@ -32,12 +29,6 @@ ingh() {
     repo_url=`git config --get remote.origin.url`
     echo Launching $repo_url
     open $repo_url
-}
-
-ghdeploy() {
-    repo_url=`git config --get remote.origin.url`
-    echo Launching $repo_url
-    open $repo_url/compare/main...uat
 }
 
 ghcompare() {
@@ -87,7 +78,7 @@ alias startgrafana="brew services start grafana"
 alias stopgrafana="brew services stop grafana"
 alias jumpk="jump -k ~/.ssh/ashburn-cvo$@"
 alias jumpcvo1="jump -k ~/.ssh/ashburn-cvo admin@$CVO1"
-alias jumpcvo2="jump -k ~/.ssh/ashburn-cvo admin@96.99.199.84"
+alias jumpcvo2="jump -k ~/.ssh/ashburn-cvo admin@$CVO2"
 alias sshcvo1="ssh -i ~/.ssh/ashburn-cvo admin@$CVO1"
 alias cvopsql="psql postgres"
 

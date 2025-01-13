@@ -1,5 +1,0 @@
----
-BUNDLE_RUBYGEMS__PKG__GITHUB__COM: "mherrerarendon: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"
-BUNDLE_BUILD__PUMA: "--with-cflags=-Wno-error=implicit-function-declaration"
-BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-xml2-lib=/usr/local/opt --with-xml2-include=/usr/local/opt/libxml2/include/libxml2/libxml --with-xslt-lib=/usr/local/opt --with-xslt-include=/usr/local/opt/libxslt/include/libxslt --with-iconv-lib=/usr/local/opt --with-iconv-include=/usr/local/opt/libiconv/include"
-BUNDLE_BUILD__LIBXML___RUBY: "--with-xml2-config=/usr/local/opt/libxml2/bin/xml2-config"
