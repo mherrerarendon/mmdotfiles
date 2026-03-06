@@ -1,0 +1,29 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+        "bindings": {
+            "L": "vim::EndOfLine",
+            "H": "vim::FirstNonWhitespace",
+            // "t": "vim::Tag",
+        },
+    },
+    {
+        "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+        "bindings": {
+            // mini.ai plugin behavior
+            "q": "vim::MiniQuotes",
+            "b": "vim::MiniBrackets",
+
+            // Traditional Vim behavior
+            "Q": "vim::AnyQuotes",
+            "B": "vim::AnyBrackets",
+        },
+    },
+]

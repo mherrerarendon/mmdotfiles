@@ -32,3 +32,10 @@ ln -s "$DOTFILES/code.json" "$HOME/Library/Application Support/Code/User/setting
 
 # sublime merge
 ln -s /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge $HOME/bin/smerge
+
+# zed
+ZED_CONFIG="$HOME/.config/zed"
+rm $ZED_CONFIG/keymap.json
+ln -s $DOTFILES/zed/keymap.json $ZED_CONFIG/keymap.json
+rm $ZED_CONFIG/settings.json
+ln -s $DOTFILES/zed/settings.json $ZED_CONFIG/settings.json

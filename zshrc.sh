@@ -101,3 +101,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+. "/Users/mherre201@cable.comcast.com/.acme.sh/acme.sh.env"
+eval "$(pyenv init -)"

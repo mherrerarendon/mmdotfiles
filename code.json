@@ -1,7 +1,9 @@
 {
   "git.autofetch": true,
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.ipynb": "jupyter-notebook",
+    "*.pdf": "default"
   },
   "testing.openTesting": "neverOpen",
   "explorer.confirmDragAndDrop": false,
@@ -15,6 +17,7 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "vim.statusBarColors.surroundinputmode": "",
   "vim.statusBarColorControl": false,
+  "vim.useCtrlKeys": true,
   "files.exclude": {
     "**/__pycache__/**": true,
     "**/*.pyc": true,
@@ -58,10 +61,11 @@
   },
   "explorer.confirmDelete": false,
   "editor.inlineSuggest.enabled": true,
+  "editor.hover.enabled": "off",
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
-    "markdown": true,
+    "markdown": false,
     "scminput": false,
     "yaml": true,
     "dart": true,
@@ -72,56 +76,66 @@
     "tf": false,
     "typescript": false,
     "typescriptreact": false,
-    "tfvars": false
+    "tfvars": false,
+    "log": false
   },
   "editor.largeFileOptimizations": false,
+  "editor.renderWhitespace": "none",
   "react-native.packager.port": 19000,
   "[typescriptreact][typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.hover.enabled": false
+    "editor.hover.enabled": "off"
   },
   "[javascriptreact][javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.hover.enabled": false
+    "editor.hover.enabled": "off"
   },
   "[python]": {
     "editor.formatOnSave": true,
-    "editor.hover.enabled": false,
+    "editor.hover.enabled": "off",
     "editor.formatOnType": true
+  },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.hover.enabled": "off"
   },
   "[rust]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.hover.enabled": false
+    "editor.hover.enabled": "off"
+  },
+  "[yaml]": {
+    // "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.hover.enabled": "off"
     // "editor.hover.sticky": false,
   },
   "[csharp]": {
     "editor.formatOnSave": true,
-    "editor.hover.enabled": false
+    "editor.hover.enabled": "off"
     // "editor.hover.sticky": false,
   },
   "[dart]": {
-    "editor.hover.enabled": false,
-    "editor.rulers": [180],
+    "editor.hover.enabled": "off",
+    "editor.rulers": [
+      180
+    ],
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
     "editor.wordBasedSuggestions": "off",
     "editor.tabSize": 4,
     "editor.formatOnType": true,
-
     // Disables built-in highlighting of words that match your selection. Without
     // this, all instances of the selected text will be highlighted, interfering
     // with Dart's ability to highlight only exact references to the selected variable.
     "editor.selectionHighlight": false,
-
     // By default, VS Code prevents code completion from popping open when in
     // "snippet mode" (editing placeholders in inserted code). Setting this option
     // to `false` stops that and allows completion to open as normal, as if you
     // weren't in a snippet placeholder.
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-
     // By default, VS Code will pre-select the most recently used item from code
     // completion. This is usually not the most relevant item.
     //
@@ -129,7 +143,6 @@
     // "recentlyUsedByPrefix" will filter the recently used items based on the
     //     text immediately preceding where completion was invoked.
     "editor.suggestSelection": "first"
-
     // // Allows pressing <TAB> to complete snippets such as `for` even when the
     // // completion list is not visible.
     // "editor.tabCompletion": "onlySnippets",
@@ -149,36 +162,80 @@
   "terminal.integrated.mouseWheelScrollSensitivity": 0.4,
   "vim.normalModeKeyBindings": [
     {
-      "before": ["H"],
-      "after": ["^"]
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     },
     {
-      "before": ["L"],
-      "after": ["$"]
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
     },
     {
-      "before": ["d", "H"],
-      "after": ["d", "^"]
+      "before": [
+        "d",
+        "H"
+      ],
+      "after": [
+        "d",
+        "^"
+      ]
     },
     {
-      "before": ["d", "L"],
-      "after": ["d", "$"]
+      "before": [
+        "d",
+        "L"
+      ],
+      "after": [
+        "d",
+        "$"
+      ]
     },
     {
-      "before": ["v", "H"],
-      "after": ["v", "^"]
+      "before": [
+        "v",
+        "H"
+      ],
+      "after": [
+        "v",
+        "^"
+      ]
     },
     {
-      "before": ["v", "L"],
-      "after": ["v", "$"]
+      "before": [
+        "v",
+        "L"
+      ],
+      "after": [
+        "v",
+        "$"
+      ]
     },
     {
-      "before": ["c", "H"],
-      "after": ["c", "^"]
+      "before": [
+        "c",
+        "H"
+      ],
+      "after": [
+        "c",
+        "^"
+      ]
     },
     {
-      "before": ["c", "L"],
-      "after": ["c", "$"]
+      "before": [
+        "c",
+        "L"
+      ],
+      "after": [
+        "c",
+        "$"
+      ]
     }
   ],
   "[html]": {
@@ -198,7 +255,9 @@
   "byesig.showIcon": false,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "Cargo.toml": "Cargo.lock",
@@ -216,7 +275,6 @@
   "jest.autoRevealOutput": "off",
   "prettier.requireConfig": true,
   "prettier.useEditorConfig": false,
-
   "[handlebars]": {
     "editor.formatOnSave": true,
     "files.insertFinalNewline": false,
@@ -246,7 +304,6 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode" // "vscode.typescript-language-features"
   },
-
   "stylelint.validate": [
     "css",
     "scss"
@@ -255,4 +312,10 @@
   "files.eol": "\n",
   "testing.automaticallyOpenTestResults": "neverOpen",
   "update.mode": "manual",
+  "lldb.suppressUpdateNotifications": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.editor.empty.hint": "hidden",
 }

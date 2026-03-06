@@ -59,6 +59,27 @@ scpcvo-1() {
     scp -i ~/.ssh/ashburn-cvo $1 admin@96.99.199.81:/home/admin
 }
 
+getmpd() {
+    curl $1 | xmllint --format -
+}
+
+livelog() {
+    kubectl logs -f $1
+}
+
+clotcpdump() {
+    kubectl exec -it $1 -- sh -c 'tcpdump -i eth0 -w - src host $2 and dst host `hostname -i` and dst port 3000' > ./clo-dump.pcap
+}
+
+cvo_podman() {
+    podman machine init
+    podman machine start
+}
+
+scte35() {
+    python $GITROOT/comcast/tools/scripts/scte35/scte35.py $1
+}
+
 # Aliases
 alias hosts="sudo nvim /private/etc/hosts"
 alias sshconfig="nvim ~/.ssh/config"
@@ -81,6 +102,11 @@ alias jumpcvo1="jump -k ~/.ssh/ashburn-cvo admin@$CVO1"
 alias jumpcvo2="jump -k ~/.ssh/ashburn-cvo admin@$CVO2"
 alias sshcvo1="ssh -i ~/.ssh/ashburn-cvo admin@$CVO1"
 alias cvopsql="psql postgres"
+alias dockerpsql="docker exec -it postgres psql -U postgres"
+alias smergeall="smerge cvo && smerge cvo2 && smerge clo && smerge clo2 && smerge clo-gateway"
+alias smergeclo="smerge clo && smerge clo2 && smerge clo3"
+alias codeall="code cvo && code cvo2 && code clo && code clo2 && code clo-gateway"
+alias codeclo="code clo && code clo2 && code clo3"
 
 # copy x5c value to clipboard and then run this command
 alias dumpcert="pbpaste | base64 -d | openssl x509 -text -noout"
