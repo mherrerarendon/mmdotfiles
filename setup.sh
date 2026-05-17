@@ -1,8 +1,6 @@
-# Global Constants
-MHROOT="$HOME/Developer/mhgit"
-MMROOT="$HOME/Developer/mmgit"
-DEVELOPER="$HOME/Developer"
-DOTFILES="$DEVELOPER/git/dotfiles"
+# Prerequisites:
+# 1. Setup `DOTFILES` environment variable to the root of the https://github.com/mherrerarendon/mmdotfiles cloned repo
+# 2. Setup `GITROOT` environment variable to the folder containing your git repos
 
 # General setup
 git clone mmdotfiles $DOTFILES
@@ -18,10 +16,12 @@ echo "export PATH=\"$HOME/bin:$PATH\"" >> $HOME/.zshenv
 
 # vim
 brew install neovim
-mkdir .vim
+mkdir -p .vim
+rm $HOME/.vim/vimrc
 ln -s $DOTFILES/vimrc $HOME/.vim/vimrc
 mkdir .config
 mkdir $HOME/.config/nvim
+rm $HOME/.config/nvim/init.vim
 ln -s $DOTFILES/init.vim $HOME/.config/nvim/init.vim
 
 # vscode

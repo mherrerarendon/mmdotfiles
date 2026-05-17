@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GITROOT="$HOME/Developer/git"
+# make sure GITROOT env variable is setup
 
 pyinit() {
     mkdir "$1"
@@ -127,7 +127,7 @@ alias dumpcert="pbpaste | base64 -d | openssl x509 -text -noout"
 
 # cd shortcuts
 alias cdgit="cd $GITROOT"
-alias cddotfiles="cd $GITROOT/dotfiles"
+alias cddotfiles="cd $DOTFILES"
 alias cddesktop="cd ~/Desktop"
 alias cdlima="cd /tmp/lima/cvo && lima"
 
@@ -138,4 +138,3 @@ alias zconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vim/vimrc"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias envconfig="nvim ~/.zshenv"
-
