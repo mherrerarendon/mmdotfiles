@@ -11,7 +11,6 @@
         "bindings": {
             "L": "vim::EndOfLine",
             "H": "vim::FirstNonWhitespace",
-            // "t": "vim::Tag",
         },
     },
     {
@@ -26,4 +25,40 @@
             "B": "vim::AnyBrackets",
         },
     },
+    {
+        "context": "ThreadsSidebar && !Editor",
+        "unbind": {
+            "z shift-m": "editor::FoldAll"
+        }
+    },
+    {
+        "context": "VimControl && !menu",
+        "unbind": {
+            "z shift-m": "editor::FoldAll"
+        }
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "cmd-k cmd-0": "editor::FoldAll"
+        }
+    },
+    {
+        "context": "ThreadsSidebar && !Editor",
+        "unbind": {
+            "z a": "editor::ToggleFold"
+        }
+    },
+    {
+        "context": "VimControl && !menu",
+        "unbind": {
+            "z a": "editor::ToggleFold"
+        }
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "cmd-k cmd-l": "editor::ToggleFold"
+        }
+    }
 ]

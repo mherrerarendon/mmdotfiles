@@ -17,17 +17,13 @@
 	trigger = commit --allow-empty -m "Trigger Build"
 	untrack = rm -r --cached
 	deleteremote = push --delete origin # works for tags and branches
-	deletetag = tag -d 
+	deletetag = tag -d
+[diff]
+    external = difft
 [diff "utf16"]
     textconv = iconv -f UTF-16LE -t utf-8
-[diff]
-	tool = bc3
-[difftool "bc3"]
-    path = "/usr/local/bin/bcomp"
 [merge]
-	tool = bc3
-[mergetool]
-	bc3 = trustExitCode
+    conflictStyle = "diff3"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

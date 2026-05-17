@@ -20,7 +20,7 @@
         "default_profile": "ask",
         "default_model": {
             "provider": "copilot_chat",
-            "model": "gpt-4.1",
+            "model": "claude-opus-4.6",
         },
         "favorite_models": [],
         "model_parameters": [],
@@ -69,5 +69,18 @@
         "mode": "system",
         "light": "VSCode Light+",
         "dark": "One Dark",
+    },
+
+    "languages": {
+        "YAML": {
+            "tab_size": 2,
+            "formatter": {
+                "external": {
+                    "command": "yamlfmt",
+                    "arguments": ["-in"],
+                },
+            },
+            "format_on_save": "on",
+        },
     },
 }
