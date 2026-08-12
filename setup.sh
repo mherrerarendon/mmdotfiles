@@ -39,3 +39,10 @@ rm $ZED_CONFIG/keymap.json
 ln -s $DOTFILES/zed/keymap.json $ZED_CONFIG/keymap.json
 rm $ZED_CONFIG/settings.json
 ln -s $DOTFILES/zed/settings.json $ZED_CONFIG/settings.json
+
+# claude
+CLAUDE_CONFIG="$HOME/.claude"
+rm $CLAUDE_CONFIG/settings.json
+ln -s $DOTFILES/claude/settings.json $CLAUDE_CONFIG/settings.json
+rm $CLAUDE_CONFIG/statusline-command.sh
+ln -s $DOTFILES/claude/statusline-command.sh $CLAUDE_CONFIG/statusline-command.sh
