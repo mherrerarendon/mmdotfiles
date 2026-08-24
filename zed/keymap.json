@@ -26,6 +26,21 @@
         },
     },
     {
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            "ctrl-u": "editor::DeleteToPreviousSubwordStart",
+        },
+    },
+    // {
+    //   "context": "VimControl && !menu && vim_mode != operator",
+    //   "bindings": {
+    //     "w": "vim::NextSubwordStart",
+    //     "b": "vim::PreviousSubwordStart",
+    //     "e": "vim::NextSubwordEnd",
+    //     "g e": "vim::PreviousSubwordEnd"
+    //   }
+    // },
+    {
         "context": "ThreadsSidebar && !Editor",
         "unbind": {
             "z shift-m": "editor::FoldAll"
